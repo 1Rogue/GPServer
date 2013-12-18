@@ -17,7 +17,7 @@
 package com.rogue.gpserver;
 
 /**
- * Main server instance class
+ * Main executor class for GPServer
  *
  * @since 1.0.0
  * @author 1Rogue
@@ -25,11 +25,34 @@ package com.rogue.gpserver;
  */
 public class GPServer {
     
+    /** The primary server instance */
+    private static Server instance;
+    
     /**
-     * Main server initializer
+     * Starting method
+     * 
+     * @since 1.0.0
+     * @version 1.0.0
+     * 
+     * @param args Command-line arguments (Unused)
      */
-    public GPServer() {
+    public static void main(String[] args) {
+        instance = new Server();
         
+        // Some silly testing thing that can be removed in release
+        //System.out.println(Server.class.getPackage().getImplementationVersion());
     }
     
+    /**
+     * Gets the primary server instance in use
+     * 
+     * @since 1.0.0
+     * @version 1.0.0
+     * 
+     * @return The primary {@link Server} instance
+     */
+    public static Server getInstance() {
+        return instance;
+    }
+
 }

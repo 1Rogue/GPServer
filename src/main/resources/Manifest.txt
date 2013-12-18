@@ -1,0 +1,7 @@
+Name: com/rogue/gpserver
+Specification-Title: GPServer main package
+Specification-Version: 1.0.0
+Specification-Vendor: 1Rogue
+Implementation-Title: com.rogue.gpserver
+Implementation-Version: 317
+Implementation-Vendor: 1Rogue

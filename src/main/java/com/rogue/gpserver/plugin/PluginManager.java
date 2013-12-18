@@ -16,17 +16,21 @@
  */
 package com.rogue.gpserver.plugin;
 
+import com.rogue.gpserver.Server;
+
 /**
+ * Manages {@link Plugin} instances for the server
  *
  * @since 1.0.0
  * @author 1Rogue
  * @version 1.0.0
  */
-public interface Plugin {
+public class PluginManager {
     
-    public void onLoad();
-    public void onEnable();
-    public void onDisable();
-    public boolean onCommand();
+    private final Server server;
+    
+    public PluginManager(Server server) {
+        this.server = server;
+    }
 
 }

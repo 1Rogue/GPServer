@@ -25,5 +25,10 @@ package com.rogue.gpserver.plugin;
  */
 public abstract class RSPlugin implements Plugin {
     
+    public void onLoad() {}
+    public void onEnable() {}
+    public void onDisable() {}
+    public boolean onCommand() { return false; }
+    
 
 }
